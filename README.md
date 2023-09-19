@@ -17,33 +17,6 @@ under StyleGANv2-ada frameworks with a faster
 rate of convergence, a smaller range of oscillation,
 and better performance in terms of FID score.*
 
-For business inquiries, please visit our website and submit the form: [NVIDIA Research Licensing](https://www.nvidia.com/en-us/research/inquiries/)
-
-## Release notes
-
-This repository is a faithful reimplementation of [StyleGAN2-ADA](https://github.com/NVlabs/stylegan2-ada/) in PyTorch, focusing on correctness, performance, and compatibility.
-
-**Correctness**
-* Full support for all primary training configurations.
-* Extensive verification of image quality, training curves, and quality metrics against the TensorFlow version.
-* Results are expected to match in all cases, excluding the effects of pseudo-random numbers and floating-point arithmetic.
-
-**Performance**
-* Training is typically 5%&ndash;30% faster compared to the TensorFlow version on NVIDIA Tesla V100 GPUs.
-* Inference is up to 35% faster in high resolutions, but it may be slightly slower in low resolutions.
-* GPU memory usage is comparable to the TensorFlow version.
-* Faster startup time when training new networks (<50s), and also when using pre-trained networks (<4s).
-* New command line options for tweaking the training performance.
-
-**Compatibility**
-* Compatible with old network pickles created using the TensorFlow version.
-* New ZIP/PNG based dataset format for maximal interoperability with existing 3rd party tools.
-* TFRecords datasets are no longer supported &mdash; they need to be converted to the new format.
-* New JSON-based format for logs, metrics, and training curves.
-* Training curves are also exported in the old TFEvents format if TensorBoard is installed.
-* Command line syntax is mostly unchanged, with a few exceptions (e.g., `dataset_tool.py`).
-* Comparison methods are not supported (`--cmethod`, `--dcap`, `--cfg=cifarbaseline`, `--aug=adarv`)
-* **Truncation is now disabled by default.**
 
 ## Data repository
 
