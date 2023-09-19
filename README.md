@@ -1,6 +1,4 @@
 ## StyleGAN2-ADA BMC implementation
-### This repo is modified from styleGAN2-ADA-pytorch implementation 
-
 
 **Stabilizing GANs’ Training with Brownian Motion Controller**<br>
 Tianjiao Luo, Ziyu Zhu, Jianfei Chen, Jun Zhu<br>
@@ -18,6 +16,7 @@ rate of convergence, a smaller range of oscillation,
 and better performance in terms of FID score.*
 
 ### This implementation includes Dirac-GAN-BMC and styleGAN2-ada-BMC with controller on generator
+### This repo is modified from styleGAN2-ADA-pytorch implementation 
 
 ## Getting started
 
