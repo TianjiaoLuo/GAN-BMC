@@ -27,7 +27,7 @@ Contact luotj21@mails.tsinghua.edu.cn if you have any questions
 - The Brownian Motion variable B(t) follows a Gaussian distribution
 - The mean and variance of B(t) are hyperparameters to be changed 
 - The controller can be added to either generator or discriminator or both depending on the nature of GAN's skeleton
-- On WGAN series we add BMC on discriminator and styleGAN on geneator 
+- For WGAN series we add BMC on discriminator and for styleGAN we add BMC on geneator 
 
 ## Getting started
 
