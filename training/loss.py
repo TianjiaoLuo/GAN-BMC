@@ -1,4 +1,4 @@
-﻿# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
+# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
 #
 # NVIDIA CORPORATION and its licensors retain all intellectual property
 # and proprietary rights in and to this software, related documentation
@@ -68,7 +68,11 @@ class StyleGAN2Loss(Loss):
                 gen_logits = self.run_D(gen_img, gen_c, sync=False)
                 training_stats.report('Loss/scores/fake', gen_logits)
                 training_stats.report('Loss/signs/fake', gen_logits.sign())
+                rou1 = 0.1
+                rou2 = 0.01
+                br_weight = rou1* torch.abs(gen_logits *gen_logits* float(torch.normal(torch.tensor(0.0), torch.tensor(0.01)))) + torch.abs(gen_logits * gen_logits * float(torch.normal(torch.tensor(1.0), torch.tensor(0.05))) ) * rou2
                 loss_Gmain = torch.nn.functional.softplus(-gen_logits) # -log(sigmoid(gen_logits))
+                loss_Gmain = loss_Gmain - br_weight
                 training_stats.report('Loss/G/loss', loss_Gmain)
             with torch.autograd.profiler.record_function('Gmain_backward'):
                 loss_Gmain.mean().mul(gain).backward()
