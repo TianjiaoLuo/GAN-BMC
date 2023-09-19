@@ -1,13 +1,21 @@
 ## StyleGAN2-ADA BMC implementation
 ### This repo is modified from styleGAN2-ADA-pytorch implementation 
 
-![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)
 
-**Training Generative Adversarial Networks with Limited Data**<br>
-Tero Karras, Miika Aittala, Janne Hellsten, Samuli Laine, Jaakko Lehtinen, Timo Aila<br>
-https://arxiv.org/abs/2006.06676<br>
+**Stabilizing GANs’ Training with Brownian Motion Controller**<br>
+Tianjiao Luo, Ziyu Zhu, Jianfei Chen, Jun Zhu 1<br>
+https://arxiv.org/pdf/2306.10468.pdf<br>
 
-Abstract: *Training generative adversarial networks (GAN) using too little data typically leads to discriminator overfitting, causing training to diverge. We propose an adaptive discriminator augmentation mechanism that significantly stabilizes training in limited data regimes. The approach does not require changes to loss functions or network architectures, and is applicable both when training from scratch and when fine-tuning an existing GAN on another dataset. We demonstrate, on several datasets, that good results are now possible using only a few thousand training images, often matching StyleGAN2 results with an order of magnitude fewer images. We expect this to open up new application domains for GANs. We also find that the widely used CIFAR-10 is, in fact, a limited data benchmark, and improve the record FID from 5.59 to 2.42.*
+Abstract: *The training process of generative adversarial networks (GANs) is unstable and does not converge globally. In this paper, we examine the stability of GANs from the perspective of control theory and propose a universal higher-order noisebased controller called Brownian Motion Controller (BMC). Starting with the prototypical case
+of Dirac-GANs, we design a BMC to retrieve
+precisely the same but reachable optimal equilibrium. We theoretically prove that the training
+process of DiracGANs-BMC is globally exponential stable and derive bounds on the rate of convergence. Then we extend our BMC to normal
+GANs and provide implementation instructions
+on GANs-BMC. Our experiments show that our
+GANs-BMC effectively stabilizes GANs’ training
+under StyleGANv2-ada frameworks with a faster
+rate of convergence, a smaller range of oscillation,
+and better performance in terms of FID score.*
 
 For business inquiries, please visit our website and submit the form: [NVIDIA Research Licensing](https://www.nvidia.com/en-us/research/inquiries/)
 
