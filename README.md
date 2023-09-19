@@ -3,7 +3,7 @@
 
 
 **Stabilizing GANs’ Training with Brownian Motion Controller**<br>
-Tianjiao Luo, Ziyu Zhu, Jianfei Chen, Jun Zhu 1<br>
+Tianjiao Luo, Ziyu Zhu, Jianfei Chen, Jun Zhu<br>
 https://arxiv.org/pdf/2306.10468.pdf<br>
 
 Abstract: *The training process of generative adversarial networks (GANs) is unstable and does not converge globally. In this paper, we examine the stability of GANs from the perspective of control theory and propose a universal higher-order noisebased controller called Brownian Motion Controller (BMC). Starting with the prototypical case
