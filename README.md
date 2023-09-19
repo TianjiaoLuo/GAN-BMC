@@ -1,4 +1,5 @@
-## StyleGAN2-ADA &mdash; Official PyTorch implementation
+## StyleGAN2-ADA BMC implementation
+### This repo is modified from styleGAN2-ADA-pytorch implementation 
 
 ![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)
 
