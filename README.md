@@ -22,6 +22,12 @@ and better performance in terms of FID score.*
 ## Note
 Contact luotj21@mails.tsinghua.edu.cn if you have any questions
 
+## Instructions on BMC
+- The Brownian Motion variable B(t) follows a Gaussian distribution
+- The mean and variance are hyperparameters to be changed 
+- The controller can be added to either generator or discriminator or both depending on the nature of GAN's skeleton
+- On WGAN series we add BMC on discriminator and styleGAN on geneator 
+
 ## Getting started
 
 Pre-trained networks are stored as `*.pkl` files that can be referenced using local filenames or URLs:
