@@ -18,6 +18,10 @@ and better performance in terms of FID score.*
 ### This implementation includes Dirac-GAN-BMC and styleGAN2-ada-BMC with controller on generator
 ### This repo is modified from styleGAN2-ADA-pytorch implementation 
 
+
+## Note
+Contact luotj21@mails.tsinghua.edu.cn if you have any questions
+
 ## Getting started
 
 Pre-trained networks are stored as `*.pkl` files that can be referenced using local filenames or URLs:
