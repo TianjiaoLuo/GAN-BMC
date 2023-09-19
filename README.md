@@ -17,7 +17,7 @@ under StyleGANv2-ada frameworks with a faster
 rate of convergence, a smaller range of oscillation,
 and better performance in terms of FID score.*
 
-
+### This implementation includes BMC on styleGAN2-ada and controller on generator
 
 ## Getting started
 
