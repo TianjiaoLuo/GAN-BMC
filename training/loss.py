@@ -72,7 +72,7 @@ class StyleGAN2Loss(Loss):
                 rou2 = 0.01
                 br_weight = 1/2 * rou1* torch.abs(gen_logits *gen_logits* float(torch.normal(torch.tensor(0.0), torch.tensor(0.01)))) + 1/4 * torch.abs(gen_logits * gen_logits * float(torch.normal(torch.tensor(1.0), torch.tensor(0.05))) ) * rou2
                 loss_Gmain = torch.nn.functional.softplus(-gen_logits) # -log(sigmoid(gen_logits))
-                loss_Gmain = loss_Gmain - br_weight
+                # loss_Gmain = loss_Gmain - br_weight
                 training_stats.report('Loss/G/loss', loss_Gmain)
             with torch.autograd.profiler.record_function('Gmain_backward'):
                 loss_Gmain.mean().mul(gain).backward()
